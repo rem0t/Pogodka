@@ -1,0 +1,14 @@
+/* 
+  LocalizableFile.strings
+  Pogodka
+
+  Created by Vladislav Kalaev on 25.03.17.
+  Copyright © 2017 Vladislav Kalaev. All rights reserved.
+ влажность, ветер, давление, ощущается как
+ Humidity, wind, pressure, felt like
+*/
+
+"humidity_LAB"="Humidity:%.f%%";
+"wind_LAB"="Wind:%.f m/s";
+"pressure_LAB"="Pressure:%.f mmHg";
+"felt_lab"="Felt like:%.f°";
