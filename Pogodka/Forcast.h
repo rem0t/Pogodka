@@ -39,6 +39,8 @@
 @property (strong,nonatomic) NSString* currentTemp1;
 @property (strong,nonatomic) NSString* currentAperentTemp;
 @property (strong,nonatomic) NSNumber* time;
+@property (strong,nonatomic) NSString* iconName;
+
 
 @property (strong,nonatomic) NSArray* jsontime;
 @property (strong,nonatomic) NSArray* jsontemp;

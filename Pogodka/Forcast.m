@@ -111,11 +111,15 @@
     NSData *date = [NSData dataWithContentsOfURL:weatherURL];
     NSDictionary *jsonDate = [NSJSONSerialization JSONObjectWithData:date options:0 error:nil];
     
+    
     NSDictionary *currentDate = [jsonDate valueForKey:@"main"];
     NSString *currentTemperature = [currentDate valueForKey:@"temp"];
     NSString *apparentTemperature = [currentDate valueForKey:@"temp_min"];
     NSString *currentHumidity = [currentDate valueForKey:@"humidity"];
     NSString *currentPressure = [currentDate valueForKey:@"pressure"];
+    
+    NSArray *weatherArray = [[jsonDate valueForKey:@"weather"] firstObject];
+    NSString *iconName = [weatherArray valueForKey:@"main"];
     
     NSDictionary *currentDatewind = [jsonDate valueForKey:@"wind"];
     NSString *currentWind = [currentDatewind valueForKey:@"speed"];
@@ -126,7 +130,8 @@
     self.humidity = currentHumidity;
     self.pressure = currentPressure;
     self.wind = currentWind;
-
+    self.iconName = iconName;
+    
     [self hourlyForecastCall];
 
 }
@@ -171,17 +176,16 @@
     return wind;
 }
 
-
 # pragma mark - HourlyForecastCall -
 
--(void) hourlyForecastCall {
+-(void) hourlyForecastCall
+{
 
-    NSString *url = [NSString stringWithFormat:@"http://api.openweathermap.org/data/2.5/forecast/daily?lat=%@&lon=%@&APPID=%@&units=metric&cnt=6",self.currentLatitude,self.currentLongitude, API_KEY];
+NSString *url = [NSString stringWithFormat:@"http://api.openweathermap.org/data/2.5/forecast/daily?lat=%@&lon=%@&APPID=%@&units=metric&cnt=6",self.currentLatitude,self.currentLongitude, API_KEY];
     
 NSURL *weatherURL = [NSURL URLWithString:url];
 NSData *date = [NSData dataWithContentsOfURL:weatherURL];
 NSDictionary *jsonDate = [NSJSONSerialization JSONObjectWithData:date options:0 error:nil];
-    
     
 NSArray *dailyjson = [jsonDate valueForKey:@"list"];
 NSArray *data = [dailyjson valueForKey:@"dt"];
@@ -192,6 +196,7 @@ NSArray *jsonTempEve = [jsonTemp valueForKey:@"eve"];
 NSArray *jsonWeather = [dailyjson valueForKey:@"weather"];
   
 NSMutableArray *name = [[NSMutableArray alloc] init];
+
 for (NSArray *dict in jsonWeather )
 {
     [name addObject:[dict firstObject]];

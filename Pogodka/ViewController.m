@@ -28,14 +28,12 @@
 
 @implementation ViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     
     [self playAnimation];
-    
     [super viewDidLoad];
-    
     [self initForecast];
-
  
     [[NSNotificationCenter defaultCenter] addObserver:self 
                                              selector:@selector(updateLabele)
@@ -44,36 +42,38 @@
 }
 
 
-- (void)didReceiveMemoryWarning {
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
 }
 
 # pragma mark - Today CollectionView -
 
--(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
+-(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
+{
     return 1;
 }
 
 
--(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+-(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
     
     return 6;
 }
 
 
--(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+-(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
     
     PatternViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"PatternCell" forIndexPath:indexPath];
     
     
-     NSString *myString1 = [NSString stringWithFormat:@"%ld°", (long)[self.weatherForcast.jsontemp [indexPath.row] integerValue]];
+    NSString *myString1 = [NSString stringWithFormat:@"%ld°", (long)[self.weatherForcast.jsontemp [indexPath.row] integerValue]];
     NSString *myString2 = [NSString stringWithFormat:@"%@", [self.weatherForcast.jsonIcon objectAtIndex:indexPath.row]];
  
-    
     cell.cellLabel.text = myString1;
     cell.weatherIcon.image = [UIImage imageNamed:myString2];
     
-  
     NSInteger timeinterval = [self.weatherForcast.jsontime[indexPath.row] integerValue];
     NSDate * date = [[NSDate alloc] initWithTimeIntervalSince1970:timeinterval];
     NSDateFormatter *formatter = [NSDateFormatter new];
@@ -85,19 +85,22 @@
     
 }
 
--(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
+-(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
+{
     
     return CGSizeMake(90.0, 140.0);
 }
 
--(UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section{
+-(UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
+{
     
     return UIEdgeInsetsMake(5, 5, 5, 5);
 }
 
 # pragma mark - WeatherForecast - 
 
--(void) initForecast {
+-(void) initForecast
+{
     
     self.weatherForcast = [[Forcast alloc] init];
 
@@ -109,7 +112,8 @@
 
 # pragma mark - set Values Labele On View -
 
-- (void) updateLabele {
+- (void) updateLabele
+{
     
     self.cityLable.text = [NSString stringWithFormat:@"%@", self.weatherForcast.locality]; // место
     self.iboCurrentTemperature.text =  [NSString stringWithFormat: @"%.f°", self.weatherForcast.currentCel]; // температура
@@ -118,23 +122,46 @@
     self.pressureLabel.text = [NSString stringWithFormat:NSLocalizedString(@"pressure_LAB", nil),self.weatherForcast.currentPressure ]; // давление
     self.apperentTemp.text = [NSString stringWithFormat:NSLocalizedString(@"felt_lab", nil), self.weatherForcast.apperentCel]; // ощущается как
     
-    if (self.weatherForcast.currentCel > 0) { // изменение бэкграунда главной вью
-        [self changePicForUI];
-    } else {
-        [self changePicForUI2];
-    }
+    [self setbackgroundMainUI];
     
     [self hideWaitingScreen];
     
     [self.todayCollectionView reloadData];  
 
 }
-# pragma mark - changePicForUI -
+# pragma mark - changePicForUI - 
 
--(void) changePicForUI { // метод подстраивает картинку под размер экрана телефона | расширить
+
+- (void) setbackgroundMainUI
+{
+    if ([self.weatherForcast.iconName isEqualToString: @"Rain"])
+    {
+        [self changeMainBackgroundToRain];
+    }
+    else if ([self.weatherForcast.iconName isEqualToString: @"Clear"])
+    {
+        [self changeMainBackgroundToClear];
+    }
+    else if ([self.weatherForcast.iconName isEqualToString: @"Snow"])
+    {
+        [self changeMainBackgroundToSnow];
+    }
+    else if ([self.weatherForcast.iconName isEqualToString: @"Cloud"])
+    {
+        [self changeMainBackgroundToCloud];
+    }
+    else
+    {
+        [self changeMainBackgroundToDefault];
+    }
+}
+
+
+-(void) changeMainBackgroundToRain
+{
 
     UIGraphicsBeginImageContext(self.view.frame.size);
-    [[UIImage imageNamed:@"bgApp.jpeg"] drawInRect:self.view.bounds];
+    [[UIImage imageNamed:@"Wrain"] drawInRect:self.view.bounds];
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
 
@@ -142,25 +169,58 @@
 
 }
 
--(void) changePicForUI2 {
+-(void) changeMainBackgroundToCloud
+{
 
     UIGraphicsBeginImageContext(self.view.frame.size);
-    [[UIImage imageNamed:@"-0.jpeg"] drawInRect:self.view.bounds];
+    [[UIImage imageNamed:@"Wcloud"] drawInRect:self.view.bounds];
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
 
     self.view.backgroundColor = [UIColor colorWithPatternImage:image];
 
+}
+
+-(void) changeMainBackgroundToSnow
+{
+    UIGraphicsBeginImageContext(self.view.frame.size);
+    [[UIImage imageNamed:@"Wsnow"]drawInRect:self.view.bounds];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    self.view.backgroundColor = [UIColor colorWithPatternImage:image];
+    
+}
+
+-(void) changeMainBackgroundToClear
+{
+    UIGraphicsBeginImageContext(self.view.frame.size);
+    [[UIImage imageNamed:@"Wclear"]drawInRect:self.view.bounds];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    self.view.backgroundColor = [UIColor colorWithPatternImage:image];
+    
+}
+
+-(void) changeMainBackgroundToDefault
+{
+    UIGraphicsBeginImageContext(self.view.frame.size);
+    [[UIImage imageNamed:@"Default"]drawInRect:self.view.bounds];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    self.view.backgroundColor = [UIColor colorWithPatternImage:image];
+    
 }
 
 # pragma mark - Side menu button -
 
 - (IBAction)sideMenu:(id)sender { //Side menu button
     
-    self.app = (AppDelegate*)[[UIApplication sharedApplication] delegate];
+    self.app = (AppDelegate*) [[UIApplication sharedApplication] delegate];
 
     [_app.driwerController toggleDrawerSide:MMDrawerSideLeft animated:YES completion:nil];
-    
     
 }
 
