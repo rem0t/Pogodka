@@ -197,6 +197,8 @@ NSArray *jsonWeather = [dailyjson valueForKey:@"weather"];
   
 NSMutableArray *name = [[NSMutableArray alloc] init];
 
+
+    
 for (NSArray *dict in jsonWeather )
 {
     [name addObject:[dict firstObject]];

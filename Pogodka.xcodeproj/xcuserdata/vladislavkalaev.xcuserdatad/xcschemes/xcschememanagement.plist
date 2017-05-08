@@ -9,6 +9,11 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>WeatherForecast.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
 		<key>Widget.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -23,6 +28,11 @@
 			<true/>
 		</dict>
 		<key>0FB274281E5BC0020054364A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>0FCE4E9B1EC0ACE500273050</key>
 		<dict>
 			<key>primary</key>
 			<true/>

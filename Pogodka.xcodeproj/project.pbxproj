@@ -22,7 +22,41 @@
 		0F6BEE601E8C00E1002BEF6B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F6BEE621E8C00E1002BEF6B /* Main.storyboard */; };
 		0F767A6A1E85DFFA0013C31D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0F767A6C1E85DFFA0013C31D /* Localizable.strings */; };
 		0F87A7451E7A30DC0033CF12 /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F87A7441E7A30DC0033CF12 /* LeftViewController.m */; };
+		0FCE4E9D1EC0ACE600273050 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FB2742A1E5BC0030054364A /* NotificationCenter.framework */; };
+		0FCE4EA11EC0ACE700273050 /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FCE4EA01EC0ACE700273050 /* TodayViewController.m */; };
+		0FCE4EA41EC0ACE700273050 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FCE4EA21EC0ACE700273050 /* MainInterface.storyboard */; };
+		0FCE4EA81EC0ACE700273050 /* WeatherForecast.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0FCE4E9C1EC0ACE600273050 /* WeatherForecast.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		0FCE4EAF1EC0D4A600273050 /* UIImage+animatedGIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FCE4EAE1EC0D4A600273050 /* UIImage+animatedGIF.m */; };
+		0FCE4EB01EC0D4A700273050 /* UIImage+animatedGIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FCE4EAE1EC0D4A600273050 /* UIImage+animatedGIF.m */; };
+		0FCE4EB11EC0EBD200273050 /* Forcast.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F440C5F1E60958C00DC55E3 /* Forcast.m */; };
+		0FCE4EB21EC0EBF700273050 /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FCE4EA01EC0ACE700273050 /* TodayViewController.m */; };
+		0FCE4EB41EC0ED9E00273050 /* test.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0FCE4EB31EC0ED9E00273050 /* test.gif */; };
+		0FCE4EB51EC0ED9F00273050 /* test.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0FCE4EB31EC0ED9E00273050 /* test.gif */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0FCE4EA61EC0ACE700273050 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0F6A677C1E53ACCF001F84D3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0FCE4E9B1EC0ACE500273050;
+			remoteInfo = WeatherForecast;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0FCE4EAC1EC0ACE700273050 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				0FCE4EA81EC0ACE700273050 /* WeatherForecast.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0F2F49741E92C4DB00FC2062 /* PatternViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PatternViewCell.h; sourceTree = "<group>"; };
@@ -55,6 +89,14 @@
 		0F87A7431E7A30DC0033CF12 /* LeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftViewController.h; sourceTree = "<group>"; };
 		0F87A7441E7A30DC0033CF12 /* LeftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftViewController.m; sourceTree = "<group>"; };
 		0FB2742A1E5BC0030054364A /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		0FCE4E9C1EC0ACE600273050 /* WeatherForecast.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WeatherForecast.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		0FCE4E9F1EC0ACE700273050 /* TodayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodayViewController.h; sourceTree = "<group>"; };
+		0FCE4EA01EC0ACE700273050 /* TodayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodayViewController.m; sourceTree = "<group>"; };
+		0FCE4EA31EC0ACE700273050 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		0FCE4EA51EC0ACE700273050 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0FCE4EAD1EC0D4A600273050 /* UIImage+animatedGIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+animatedGIF.h"; sourceTree = "<group>"; };
+		0FCE4EAE1EC0D4A600273050 /* UIImage+animatedGIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+animatedGIF.m"; sourceTree = "<group>"; };
+		0FCE4EB31EC0ED9E00273050 /* test.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = test.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +108,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0FCE4E991EC0ACE500273050 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0FCE4E9D1EC0ACE600273050 /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -73,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				0F6A67861E53ACCF001F84D3 /* Pogodka */,
+				0FCE4E9E1EC0ACE700273050 /* WeatherForecastWidget */,
 				0F6A67851E53ACCF001F84D3 /* Products */,
 				0F6A67A51E568F5F001F84D3 /* Frameworks */,
 			);
@@ -82,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				0F6A67841E53ACCF001F84D3 /* Pogodka.app */,
+				0FCE4E9C1EC0ACE600273050 /* WeatherForecast.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -159,6 +211,21 @@
 			name = UIandControl;
 			sourceTree = "<group>";
 		};
+		0FCE4E9E1EC0ACE700273050 /* WeatherForecastWidget */ = {
+			isa = PBXGroup;
+			children = (
+				0FCE4EB31EC0ED9E00273050 /* test.gif */,
+				0FCE4EAD1EC0D4A600273050 /* UIImage+animatedGIF.h */,
+				0FCE4EAE1EC0D4A600273050 /* UIImage+animatedGIF.m */,
+				0FCE4E9F1EC0ACE700273050 /* TodayViewController.h */,
+				0FCE4EA01EC0ACE700273050 /* TodayViewController.m */,
+				0FCE4EA21EC0ACE700273050 /* MainInterface.storyboard */,
+				0FCE4EA51EC0ACE700273050 /* Info.plist */,
+			);
+			name = WeatherForecastWidget;
+			path = WeatherForecast;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -169,15 +236,34 @@
 				0F6A67801E53ACCF001F84D3 /* Sources */,
 				0F6A67811E53ACCF001F84D3 /* Frameworks */,
 				0F6A67821E53ACCF001F84D3 /* Resources */,
+				0FCE4EAC1EC0ACE700273050 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				0FCE4EA71EC0ACE700273050 /* PBXTargetDependency */,
 			);
 			name = Pogodka;
 			productName = Pogodka;
 			productReference = 0F6A67841E53ACCF001F84D3 /* Pogodka.app */;
 			productType = "com.apple.product-type.application";
+		};
+		0FCE4E9B1EC0ACE500273050 /* WeatherForecast */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0FCE4EAB1EC0ACE700273050 /* Build configuration list for PBXNativeTarget "WeatherForecast" */;
+			buildPhases = (
+				0FCE4E981EC0ACE500273050 /* Sources */,
+				0FCE4E991EC0ACE500273050 /* Frameworks */,
+				0FCE4E9A1EC0ACE500273050 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WeatherForecast;
+			productName = WeatherForecast;
+			productReference = 0FCE4E9C1EC0ACE600273050 /* WeatherForecast.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -189,6 +275,11 @@
 				ORGANIZATIONNAME = "Vladislav Kalaev";
 				TargetAttributes = {
 					0F6A67831E53ACCF001F84D3 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = N89Q9ZJQ5N;
+						ProvisioningStyle = Automatic;
+					};
+					0FCE4E9B1EC0ACE500273050 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = N89Q9ZJQ5N;
 						ProvisioningStyle = Automatic;
@@ -210,6 +301,7 @@
 			projectRoot = "";
 			targets = (
 				0F6A67831E53ACCF001F84D3 /* Pogodka */,
+				0FCE4E9B1EC0ACE500273050 /* WeatherForecast */,
 			);
 		};
 /* End PBXProject section */
@@ -221,8 +313,18 @@
 			files = (
 				0F6BEE601E8C00E1002BEF6B /* Main.storyboard in Resources */,
 				0F767A6A1E85DFFA0013C31D /* Localizable.strings in Resources */,
+				0FCE4EB41EC0ED9E00273050 /* test.gif in Resources */,
 				0F6A67971E53ACD0001F84D3 /* LaunchScreen.storyboard in Resources */,
 				0F6A67941E53ACD0001F84D3 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0FCE4E9A1EC0ACE500273050 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0FCE4EB51EC0ED9F00273050 /* test.gif in Resources */,
+				0FCE4EA41EC0ACE700273050 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,6 +335,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FCE4EB21EC0EBF700273050 /* TodayViewController.m in Sources */,
 				0F6A678F1E53ACCF001F84D3 /* ViewController.m in Sources */,
 				0F6BEE5A1E8BFFF0002BEF6B /* MMDrawerBarButtonItem.m in Sources */,
 				0F6BEE5B1E8BFFF0002BEF6B /* MMDrawerController.m in Sources */,
@@ -241,12 +344,31 @@
 				0F6A678C1E53ACCF001F84D3 /* AppDelegate.m in Sources */,
 				0F6BEE5D1E8BFFF0002BEF6B /* UIViewController+MMDrawerController.m in Sources */,
 				0F2F49761E92C4DB00FC2062 /* PatternViewCell.m in Sources */,
+				0FCE4EAF1EC0D4A600273050 /* UIImage+animatedGIF.m in Sources */,
 				0F440C671E64F3EF00DC55E3 /* Forcast.m in Sources */,
 				0F6A67891E53ACCF001F84D3 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0FCE4E981EC0ACE500273050 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0FCE4EA11EC0ACE700273050 /* TodayViewController.m in Sources */,
+				0FCE4EB11EC0EBD200273050 /* Forcast.m in Sources */,
+				0FCE4EB01EC0D4A700273050 /* UIImage+animatedGIF.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0FCE4EA71EC0ACE700273050 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0FCE4E9B1EC0ACE500273050 /* WeatherForecast */;
+			targetProxy = 0FCE4EA61EC0ACE700273050 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		0F6A67951E53ACD0001F84D3 /* LaunchScreen.storyboard */ = {
@@ -273,6 +395,14 @@
 				0F767A6D1E85E0010013C31D /* ru */,
 			);
 			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		0FCE4EA21EC0ACE700273050 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0FCE4EA31EC0ACE700273050 /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -396,6 +526,30 @@
 			};
 			name = Release;
 		};
+		0FCE4EA91EC0ACE700273050 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = N89Q9ZJQ5N;
+				INFOPLIST_FILE = WeatherForecast/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = rem0t.Pogodka.WeatherForecast;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		0FCE4EAA1EC0ACE700273050 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = N89Q9ZJQ5N;
+				INFOPLIST_FILE = WeatherForecast/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = rem0t.Pogodka.WeatherForecast;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -413,6 +567,15 @@
 			buildConfigurations = (
 				0F6A679C1E53ACD0001F84D3 /* Debug */,
 				0F6A679D1E53ACD0001F84D3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0FCE4EAB1EC0ACE700273050 /* Build configuration list for PBXNativeTarget "WeatherForecast" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0FCE4EA91EC0ACE700273050 /* Debug */,
+				0FCE4EAA1EC0ACE700273050 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
