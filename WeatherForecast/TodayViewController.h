@@ -10,14 +10,15 @@
 #import "Forcast.h"
 #import "UIImage+animatedGIF.h"
 
-
 @interface TodayViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UIImageView *todayWeatherImage;
+
+
+@property (strong, nonatomic) IBOutlet UIImageView *todayWeatherImage;
 @property (weak, nonatomic) IBOutlet UILabel *todayCityName;
 @property (weak, nonatomic) IBOutlet UILabel *tomorrowWeather;
 @property (weak, nonatomic) IBOutlet UILabel *todayTemp;
 
-@property (strong, nonatomic) Forcast *forecastClass;
+@property (strong, nonatomic) Forcast *weatherForcast;
 
 
 @end

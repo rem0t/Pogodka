@@ -17,11 +17,6 @@
 
 @property (weak, nonatomic) IBOutlet UICollectionView *todayCollectionView;
 
-
-- (IBAction)sideMenu:(id)sender;
-
-- (IBAction)updateForecast:(id)sender;
-
 - (void) viewDidLoad;
 - (void) playAnimation;
 - (void) hideWaitingScreen;

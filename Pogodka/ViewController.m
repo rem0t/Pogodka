@@ -39,6 +39,9 @@
                                              selector:@selector(updateLabele)
                                                  name:@"MyNotification"
                                                object:nil];
+    
+    
+    
 }
 
 
@@ -101,6 +104,9 @@
 
 -(void) initForecast
 {
+    
+    self.weatherForcast = [[Forcast alloc]init];
+    
     [self.weatherForcast setLocation];
     
 }

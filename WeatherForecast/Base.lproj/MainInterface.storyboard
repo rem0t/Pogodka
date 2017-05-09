@@ -19,38 +19,40 @@
                         <viewControllerLayoutGuide type="bottom" id="FKl-LY-JtV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" simulatedAppContext="notificationCenter" id="S3S-Oj-5AN">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="170"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PTK-zD-VLd">
-                                <rect key="frame" x="20" y="22" width="120" height="120"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="120" id="0IL-xx-2ai"/>
-                                </constraints>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" text="Температура" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3y3-j5-2cK">
+                                <rect key="frame" x="166" y="37" width="111" height="21"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Город" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qb4-lJ-UwL">
+                                <rect key="frame" x="166" y="8" width="51" height="21"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Завтра " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TcK-Q3-b5V">
+                                <rect key="frame" x="166" y="66" width="66" height="21"/>
+                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PTK-zD-VLd">
+                                <rect key="frame" x="10" y="8" width="132" height="134"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Город" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qb4-lJ-UwL">
-                                <rect key="frame" x="166" y="22" width="138" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Helvetica-LightOblique" family="Helvetica" pointSize="18"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Завтра " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TcK-Q3-b5V">
-                                <rect key="frame" x="166" y="109" width="138" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Helvetica-LightOblique" family="Helvetica" pointSize="18"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Температура" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3y3-j5-2cK">
-                                <rect key="frame" x="166" y="63" width="138" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Helvetica-LightOblique" family="Helvetica" pointSize="18"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="PTK-zD-VLd" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" constant="22" id="nfE-fa-J7u"/>
-                            <constraint firstItem="PTK-zD-VLd" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leadingMargin" constant="4" id="wir-Ue-erh"/>
-                            <constraint firstItem="FKl-LY-JtV" firstAttribute="top" secondItem="PTK-zD-VLd" secondAttribute="bottom" constant="28" id="zhY-XV-j82"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="PTK-zD-VLd" secondAttribute="trailing" constant="162" id="Fyr-wB-aPJ"/>
+                            <constraint firstItem="FKl-LY-JtV" firstAttribute="top" secondItem="PTK-zD-VLd" secondAttribute="bottom" constant="8" id="GUR-1F-n5l"/>
+                            <constraint firstItem="PTK-zD-VLd" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" constant="8" id="HFi-k4-cAZ"/>
+                            <constraint firstItem="3y3-j5-2cK" firstAttribute="top" secondItem="Qb4-lJ-UwL" secondAttribute="bottom" constant="8" id="IHY-8X-4XC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Qb4-lJ-UwL" secondAttribute="trailing" constant="87" id="JCp-T1-vib"/>
+                            <constraint firstItem="TcK-Q3-b5V" firstAttribute="top" secondItem="3y3-j5-2cK" secondAttribute="bottom" constant="8" id="YkW-cz-9oq"/>
+                            <constraint firstItem="PTK-zD-VLd" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leadingMargin" constant="-6" id="ZUb-NQ-Ksz"/>
+                            <constraint firstItem="3y3-j5-2cK" firstAttribute="leading" secondItem="Qb4-lJ-UwL" secondAttribute="leading" id="gXA-Tb-rwX"/>
+                            <constraint firstItem="Qb4-lJ-UwL" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" constant="8" id="kN5-oA-WSO"/>
+                            <constraint firstItem="TcK-Q3-b5V" firstAttribute="leading" secondItem="3y3-j5-2cK" secondAttribute="leading" id="kOn-Oo-CL2"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
@@ -58,7 +60,7 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="320" height="170"/>
+                    <size key="freeformSize" width="320" height="150"/>
                     <connections>
                         <outlet property="todayCityName" destination="Qb4-lJ-UwL" id="tAO-hh-t2Q"/>
                         <outlet property="todayTemp" destination="3y3-j5-2cK" id="klp-ea-iMk"/>
@@ -68,7 +70,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-894" y="125"/>
+            <point key="canvasLocation" x="-2856" y="-324"/>
         </scene>
     </scenes>
 </document>

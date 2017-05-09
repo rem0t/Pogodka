@@ -18,11 +18,27 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-
-    NSURL *url = [[NSBundle mainBundle] URLForResource:@"test" withExtension:@"gif"];
-    self.todayWeatherImage.image = [UIImage animatedImageWithAnimatedGIFURL:url];
     
+    [self initForecast];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(getCurrentData)
+                                                 name:@"MyNotification"
+                                               object:nil];
+    
+  //  self.extensionContext.widgetLargestAvailableDisplayMode = NCWidgetDisplayModeExpanded; // больше меньше
+
 }
+
+//- (void)widgetActiveDisplayModeDidChange:(NCWidgetDisplayMode)activeDisplayMode withMaximumSize:(CGSize)maxSize { // реализация больше меньше
+//    if (activeDisplayMode == NCWidgetDisplayModeExpanded) {
+//        self.preferredContentSize = CGSizeMake(0.0, 200.0);
+//    } else if (activeDisplayMode == NCWidgetDisplayModeCompact) {
+//        self.preferredContentSize = maxSize;
+//    }
+//}
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -39,30 +55,57 @@
     completionHandler(NCUpdateResultNewData);
 }
 
+
+
 -(void) getCurrentData {
     
-    self.todayCityName.text = _forecastClass.locality;
-    self.todayTemp.text = _forecastClass.currentTemp;
-    self.tomorrowWeather.text = [_forecastClass.jsonIcon objectAtIndex:1];
     
+    self.todayCityName.text = [NSString stringWithFormat:@"%@", self.weatherForcast.locality];
+    self.todayTemp.text = [NSString stringWithFormat: @"Now: %.f°", self.weatherForcast.currentCel];
+    self.tomorrowWeather.text = [NSString stringWithFormat:@"Tomorrow: %@", [self.weatherForcast.jsonIcon objectAtIndex:1]];
     
+    [self setTodayIconGif];
+
+}
+
+-(void) initForecast
+{
     
-    NSURL *url = [[NSBundle mainBundle] URLForResource:@"RainGif" withExtension:@"gif"];
-    self.todayWeatherImage.image = [UIImage animatedImageWithAnimatedGIFData:[NSData dataWithContentsOfURL:url]];
-   // self.urlImageView.image = [UIImage animatedImageWithAnimatedGIFURL:url];
+    self.weatherForcast = [[Forcast alloc]init];
     
-//    url = [[NSBundle mainBundle] URLForResource:@"variableDuration" withExtension:@"gif"];
-//    self.variableDurationImageView.image = [UIImage animatedImageWithAnimatedGIFURL:url];
-//
-    
-    
+    [self.weatherForcast setLocation];
     
     
 }
 
+- (void) setTodayIconGif
+{
+    NSURL *url;
+    
+    if ([self.weatherForcast.iconName isEqualToString: @"Rain"])
+    {
+        url = [[NSBundle mainBundle] URLForResource:@"rain" withExtension:@"gif"];
+    }
+    else if ([self.weatherForcast.iconName isEqualToString: @"Clear"])
+    {
+        url = [[NSBundle mainBundle] URLForResource:@"sunny" withExtension:@"gif"];
+    }
+    else if ([self.weatherForcast.iconName isEqualToString: @"Snow"])
+    {
+        url = [[NSBundle mainBundle] URLForResource:@"snow" withExtension:@"gif"];
+    }
+    else if ([self.weatherForcast.iconName isEqualToString: @"Cloud"])
+    {
+        url = [[NSBundle mainBundle] URLForResource:@"cloudy1" withExtension:@"gif"];
+    }
+    else
+    {
+        url = [[NSBundle mainBundle] URLForResource:@"fog" withExtension:@"gif"];
+    }
+    
+    self.todayWeatherImage.image = [UIImage animatedImageWithAnimatedGIFURL:url];
 
-
-
+}
 
 
 @end

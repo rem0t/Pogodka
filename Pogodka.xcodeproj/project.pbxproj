@@ -12,7 +12,6 @@
 		0F6A67891E53ACCF001F84D3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F6A67881E53ACCF001F84D3 /* main.m */; };
 		0F6A678C1E53ACCF001F84D3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F6A678B1E53ACCF001F84D3 /* AppDelegate.m */; };
 		0F6A678F1E53ACCF001F84D3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F6A678E1E53ACCF001F84D3 /* ViewController.m */; };
-		0F6A67941E53ACD0001F84D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F6A67931E53ACD0001F84D3 /* Assets.xcassets */; };
 		0F6A67971E53ACD0001F84D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F6A67951E53ACD0001F84D3 /* LaunchScreen.storyboard */; };
 		0F6A67A71E568F60001F84D3 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F6A67A61E568F60001F84D3 /* CoreLocation.framework */; };
 		0F6BEE5A1E8BFFF0002BEF6B /* MMDrawerBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F6BEE521E8BFFF0002BEF6B /* MMDrawerBarButtonItem.m */; };
@@ -22,16 +21,30 @@
 		0F6BEE601E8C00E1002BEF6B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F6BEE621E8C00E1002BEF6B /* Main.storyboard */; };
 		0F767A6A1E85DFFA0013C31D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0F767A6C1E85DFFA0013C31D /* Localizable.strings */; };
 		0F87A7451E7A30DC0033CF12 /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F87A7441E7A30DC0033CF12 /* LeftViewController.m */; };
+		0FC7DC141EC1442700A2EC0A /* UIImage+animatedGIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FC7DC131EC1442700A2EC0A /* UIImage+animatedGIF.m */; };
+		0FC7DC151EC1445100A2EC0A /* UIImage+animatedGIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FC7DC131EC1442700A2EC0A /* UIImage+animatedGIF.m */; };
+		0FC7DC1A1EC1460F00A2EC0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FC7DC191EC1460F00A2EC0A /* Assets.xcassets */; };
+		0FC7DC1B1EC1460F00A2EC0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FC7DC191EC1460F00A2EC0A /* Assets.xcassets */; };
 		0FCE4E9D1EC0ACE600273050 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FB2742A1E5BC0030054364A /* NotificationCenter.framework */; };
 		0FCE4EA11EC0ACE700273050 /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FCE4EA01EC0ACE700273050 /* TodayViewController.m */; };
 		0FCE4EA41EC0ACE700273050 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FCE4EA21EC0ACE700273050 /* MainInterface.storyboard */; };
 		0FCE4EA81EC0ACE700273050 /* WeatherForecast.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0FCE4E9C1EC0ACE600273050 /* WeatherForecast.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		0FCE4EAF1EC0D4A600273050 /* UIImage+animatedGIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FCE4EAE1EC0D4A600273050 /* UIImage+animatedGIF.m */; };
-		0FCE4EB01EC0D4A700273050 /* UIImage+animatedGIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FCE4EAE1EC0D4A600273050 /* UIImage+animatedGIF.m */; };
 		0FCE4EB11EC0EBD200273050 /* Forcast.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F440C5F1E60958C00DC55E3 /* Forcast.m */; };
 		0FCE4EB21EC0EBF700273050 /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FCE4EA01EC0ACE700273050 /* TodayViewController.m */; };
-		0FCE4EB41EC0ED9E00273050 /* test.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0FCE4EB31EC0ED9E00273050 /* test.gif */; };
-		0FCE4EB51EC0ED9F00273050 /* test.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0FCE4EB31EC0ED9E00273050 /* test.gif */; };
+		0FEBBCF01EC1DF7400E978F3 /* sleet.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0FEBBCEF1EC1DF7400E978F3 /* sleet.gif */; };
+		0FEBBCF11EC1DF8E00E978F3 /* sleet.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0FEBBCEF1EC1DF7400E978F3 /* sleet.gif */; };
+		0FEBBCF31EC1DFAB00E978F3 /* fog.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0FEBBCF21EC1DFAB00E978F3 /* fog.gif */; };
+		0FEBBCF41EC1DFAB00E978F3 /* fog.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0FEBBCF21EC1DFAB00E978F3 /* fog.gif */; };
+		0FEBBCF61EC1DFB200E978F3 /* snow.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0FEBBCF51EC1DFB200E978F3 /* snow.gif */; };
+		0FEBBCF71EC1DFB200E978F3 /* snow.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0FEBBCF51EC1DFB200E978F3 /* snow.gif */; };
+		0FEBBCF91EC1DFBB00E978F3 /* rain.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0FEBBCF81EC1DFBB00E978F3 /* rain.gif */; };
+		0FEBBCFA1EC1DFBB00E978F3 /* rain.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0FEBBCF81EC1DFBB00E978F3 /* rain.gif */; };
+		0FEBBCFC1EC1DFE400E978F3 /* sunny.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0FEBBCFB1EC1DFE400E978F3 /* sunny.gif */; };
+		0FEBBCFD1EC1DFE400E978F3 /* sunny.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0FEBBCFB1EC1DFE400E978F3 /* sunny.gif */; };
+		0FEBBCFF1EC1E00400E978F3 /* partlyCloudy.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0FEBBCFE1EC1E00400E978F3 /* partlyCloudy.gif */; };
+		0FEBBD001EC1E00400E978F3 /* partlyCloudy.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0FEBBCFE1EC1E00400E978F3 /* partlyCloudy.gif */; };
+		0FEBBD031EC1E85600E978F3 /* cloudy1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0FEBBD021EC1E85600E978F3 /* cloudy1.gif */; };
+		0FEBBD041EC1E85600E978F3 /* cloudy1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0FEBBD021EC1E85600E978F3 /* cloudy1.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,7 +82,6 @@
 		0F6A678B1E53ACCF001F84D3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		0F6A678D1E53ACCF001F84D3 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		0F6A678E1E53ACCF001F84D3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		0F6A67931E53ACD0001F84D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0F6A67961E53ACD0001F84D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0F6A67981E53ACD0001F84D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0F6A67A61E568F60001F84D3 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -89,14 +101,21 @@
 		0F87A7431E7A30DC0033CF12 /* LeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftViewController.h; sourceTree = "<group>"; };
 		0F87A7441E7A30DC0033CF12 /* LeftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftViewController.m; sourceTree = "<group>"; };
 		0FB2742A1E5BC0030054364A /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		0FC7DC121EC1442700A2EC0A /* UIImage+animatedGIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+animatedGIF.h"; sourceTree = "<group>"; };
+		0FC7DC131EC1442700A2EC0A /* UIImage+animatedGIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+animatedGIF.m"; sourceTree = "<group>"; };
+		0FC7DC191EC1460F00A2EC0A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0FCE4E9C1EC0ACE600273050 /* WeatherForecast.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WeatherForecast.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FCE4E9F1EC0ACE700273050 /* TodayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodayViewController.h; sourceTree = "<group>"; };
 		0FCE4EA01EC0ACE700273050 /* TodayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodayViewController.m; sourceTree = "<group>"; };
 		0FCE4EA31EC0ACE700273050 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		0FCE4EA51EC0ACE700273050 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0FCE4EAD1EC0D4A600273050 /* UIImage+animatedGIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+animatedGIF.h"; sourceTree = "<group>"; };
-		0FCE4EAE1EC0D4A600273050 /* UIImage+animatedGIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+animatedGIF.m"; sourceTree = "<group>"; };
-		0FCE4EB31EC0ED9E00273050 /* test.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = test.gif; sourceTree = "<group>"; };
+		0FEBBCEF1EC1DF7400E978F3 /* sleet.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = sleet.gif; sourceTree = "<group>"; };
+		0FEBBCF21EC1DFAB00E978F3 /* fog.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = fog.gif; sourceTree = "<group>"; };
+		0FEBBCF51EC1DFB200E978F3 /* snow.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = snow.gif; sourceTree = "<group>"; };
+		0FEBBCF81EC1DFBB00E978F3 /* rain.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = rain.gif; sourceTree = "<group>"; };
+		0FEBBCFB1EC1DFE400E978F3 /* sunny.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = sunny.gif; sourceTree = "<group>"; };
+		0FEBBCFE1EC1E00400E978F3 /* partlyCloudy.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = partlyCloudy.gif; sourceTree = "<group>"; };
+		0FEBBD021EC1E85600E978F3 /* cloudy1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = cloudy1.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,7 +162,6 @@
 			children = (
 				0FCE4E961EAB8E0300273050 /* Model */,
 				0FCE4E971EAB8E1600273050 /* UIandControl */,
-				0F6A67931E53ACD0001F84D3 /* Assets.xcassets */,
 				0F6A67951E53ACD0001F84D3 /* LaunchScreen.storyboard */,
 				0F6BEE621E8C00E1002BEF6B /* Main.storyboard */,
 				0F6A67981E53ACD0001F84D3 /* Info.plist */,
@@ -207,6 +225,7 @@
 				0F6A678E1E53ACCF001F84D3 /* ViewController.m */,
 				0F2F49741E92C4DB00FC2062 /* PatternViewCell.h */,
 				0F2F49751E92C4DB00FC2062 /* PatternViewCell.m */,
+				0FC7DC191EC1460F00A2EC0A /* Assets.xcassets */,
 			);
 			name = UIandControl;
 			sourceTree = "<group>";
@@ -214,9 +233,8 @@
 		0FCE4E9E1EC0ACE700273050 /* WeatherForecastWidget */ = {
 			isa = PBXGroup;
 			children = (
-				0FCE4EB31EC0ED9E00273050 /* test.gif */,
-				0FCE4EAD1EC0D4A600273050 /* UIImage+animatedGIF.h */,
-				0FCE4EAE1EC0D4A600273050 /* UIImage+animatedGIF.m */,
+				0FEBBD011EC1E02900E978F3 /* GifModel */,
+				0FEBBCEE1EC1DF6000E978F3 /* Todayicon */,
 				0FCE4E9F1EC0ACE700273050 /* TodayViewController.h */,
 				0FCE4EA01EC0ACE700273050 /* TodayViewController.m */,
 				0FCE4EA21EC0ACE700273050 /* MainInterface.storyboard */,
@@ -224,6 +242,29 @@
 			);
 			name = WeatherForecastWidget;
 			path = WeatherForecast;
+			sourceTree = "<group>";
+		};
+		0FEBBCEE1EC1DF6000E978F3 /* Todayicon */ = {
+			isa = PBXGroup;
+			children = (
+				0FEBBD021EC1E85600E978F3 /* cloudy1.gif */,
+				0FEBBCF21EC1DFAB00E978F3 /* fog.gif */,
+				0FEBBCEF1EC1DF7400E978F3 /* sleet.gif */,
+				0FEBBCF51EC1DFB200E978F3 /* snow.gif */,
+				0FEBBCF81EC1DFBB00E978F3 /* rain.gif */,
+				0FEBBCFB1EC1DFE400E978F3 /* sunny.gif */,
+				0FEBBCFE1EC1E00400E978F3 /* partlyCloudy.gif */,
+			);
+			name = Todayicon;
+			sourceTree = "<group>";
+		};
+		0FEBBD011EC1E02900E978F3 /* GifModel */ = {
+			isa = PBXGroup;
+			children = (
+				0FC7DC121EC1442700A2EC0A /* UIImage+animatedGIF.h */,
+				0FC7DC131EC1442700A2EC0A /* UIImage+animatedGIF.m */,
+			);
+			name = GifModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -312,10 +353,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F6BEE601E8C00E1002BEF6B /* Main.storyboard in Resources */,
+				0FEBBCFC1EC1DFE400E978F3 /* sunny.gif in Resources */,
+				0FEBBCF01EC1DF7400E978F3 /* sleet.gif in Resources */,
 				0F767A6A1E85DFFA0013C31D /* Localizable.strings in Resources */,
-				0FCE4EB41EC0ED9E00273050 /* test.gif in Resources */,
+				0FEBBCF61EC1DFB200E978F3 /* snow.gif in Resources */,
+				0FEBBCF31EC1DFAB00E978F3 /* fog.gif in Resources */,
+				0FEBBCFF1EC1E00400E978F3 /* partlyCloudy.gif in Resources */,
+				0FEBBD031EC1E85600E978F3 /* cloudy1.gif in Resources */,
 				0F6A67971E53ACD0001F84D3 /* LaunchScreen.storyboard in Resources */,
-				0F6A67941E53ACD0001F84D3 /* Assets.xcassets in Resources */,
+				0FEBBCF91EC1DFBB00E978F3 /* rain.gif in Resources */,
+				0FC7DC1A1EC1460F00A2EC0A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,8 +370,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0FCE4EB51EC0ED9F00273050 /* test.gif in Resources */,
+				0FEBBD001EC1E00400E978F3 /* partlyCloudy.gif in Resources */,
+				0FC7DC1B1EC1460F00A2EC0A /* Assets.xcassets in Resources */,
+				0FEBBCF11EC1DF8E00E978F3 /* sleet.gif in Resources */,
+				0FEBBCFD1EC1DFE400E978F3 /* sunny.gif in Resources */,
+				0FEBBCF71EC1DFB200E978F3 /* snow.gif in Resources */,
 				0FCE4EA41EC0ACE700273050 /* MainInterface.storyboard in Resources */,
+				0FEBBCFA1EC1DFBB00E978F3 /* rain.gif in Resources */,
+				0FEBBCF41EC1DFAB00E978F3 /* fog.gif in Resources */,
+				0FEBBD041EC1E85600E978F3 /* cloudy1.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,6 +390,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0FCE4EB21EC0EBF700273050 /* TodayViewController.m in Sources */,
+				0FC7DC141EC1442700A2EC0A /* UIImage+animatedGIF.m in Sources */,
 				0F6A678F1E53ACCF001F84D3 /* ViewController.m in Sources */,
 				0F6BEE5A1E8BFFF0002BEF6B /* MMDrawerBarButtonItem.m in Sources */,
 				0F6BEE5B1E8BFFF0002BEF6B /* MMDrawerController.m in Sources */,
@@ -344,7 +399,6 @@
 				0F6A678C1E53ACCF001F84D3 /* AppDelegate.m in Sources */,
 				0F6BEE5D1E8BFFF0002BEF6B /* UIViewController+MMDrawerController.m in Sources */,
 				0F2F49761E92C4DB00FC2062 /* PatternViewCell.m in Sources */,
-				0FCE4EAF1EC0D4A600273050 /* UIImage+animatedGIF.m in Sources */,
 				0F440C671E64F3EF00DC55E3 /* Forcast.m in Sources */,
 				0F6A67891E53ACCF001F84D3 /* main.m in Sources */,
 			);
@@ -355,8 +409,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0FCE4EA11EC0ACE700273050 /* TodayViewController.m in Sources */,
+				0FC7DC151EC1445100A2EC0A /* UIImage+animatedGIF.m in Sources */,
 				0FCE4EB11EC0EBD200273050 /* Forcast.m in Sources */,
-				0FCE4EB01EC0D4A700273050 /* UIImage+animatedGIF.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

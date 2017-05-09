@@ -11,4 +11,4 @@
 "humidity_LAB"="Humidity:%.f%%";
 "wind_LAB"="Wind:%.f m/s";
 "pressure_LAB"="Pressure:%.f mmHg";
-"felt_lab"="Felt like:%.f°";
+"felt_lab"="Feels like:%.f°";
