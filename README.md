@@ -1,7 +1,7 @@
 
 ### Pogodka app
 
-main features
+Main features
 
 * Weather forecast;
 * Current weather data;
@@ -13,7 +13,7 @@ main features
 * Notifications about major weather changes(to develop);
 * Left menu side with tabbed selection of the city(to develop);
 
-Screnshots
+Application operation
 ----
 
 | ![myapp](https://cloud.githubusercontent.com/assets/23454470/25853250/d63d67d8-34d4-11e7-842a-c280107cf776.gif)
