@@ -189,7 +189,7 @@ NSDictionary *jsonDate = [NSJSONSerialization JSONObjectWithData:date options:0 
     
 NSArray *dailyjson = [jsonDate valueForKey:@"list"];
 NSArray *data = [dailyjson valueForKey:@"dt"];
-    
+        
 NSArray *jsonTemp = [dailyjson valueForKey:@"temp"];
 NSArray *jsonTempEve = [jsonTemp valueForKey:@"eve"];
     

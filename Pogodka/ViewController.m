@@ -5,10 +5,8 @@
 //  Created by Vladislav Kalaev on 15.02.17.
 //  Copyright © 2017 Vladislav Kalaev. All rights reserved.
 //
-// 1) Виджет
-// 2) Выбор города и закладки 
-// 3) главная фича заключается в том что предупреждает о наступающем дожде например каждый 3-6 часов отправляет запрос и если будет дождь то у ведомляет пользователя (вместо облака будет будильник для сие задумки)
-// 4) левое меню - поле для города, таблица для ранне выбранных городов, кнопка для добавления. Юзер пишет город - нажимет на кнопку - обновляется погода
+// 0) главная фича заключается в том что предупреждает о наступающем дожде например каждый 3-6 часов отправляет запрос и если будет дождь то у ведомляет пользователя (вместо облака будет будильник для сие задумки)
+
 
 
 #import "ViewController.h"
@@ -32,7 +30,9 @@
 {
     
     [self playAnimation];
+    
     [super viewDidLoad];
+    
     [self initForecast];
  
     [[NSNotificationCenter defaultCenter] addObserver:self 
@@ -136,6 +136,7 @@
 
 - (void) setbackgroundMainUI
 {
+    
     if ([self.weatherForcast.iconName isEqualToString: @"Rain"])
     {
         [self changeMainBackgroundToRain];
@@ -158,6 +159,7 @@
     }
 }
 
+//много повторяющегося кода 
 
 -(void) changeMainBackgroundToRain
 {
@@ -208,7 +210,7 @@
 -(void) changeMainBackgroundToDefault
 {
     UIGraphicsBeginImageContext(self.view.frame.size);
-    [[UIImage imageNamed:@"Default"]drawInRect:self.view.bounds];
+    [[UIImage imageNamed:@"Wdefault"]drawInRect:self.view.bounds];
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     
@@ -292,7 +294,6 @@
                         [UIImage imageNamed:@"Snow"],
                         [UIImage imageNamed:@"cloudy"],
                         nil];
-    
     
     self.imgConnection.animationImages = connectingImages;
     self.imgConnection.animationDuration = 1;

@@ -18,18 +18,18 @@
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleAspectFit" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleAspectFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_ _ _ " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tZ1-0H-k02">
-                                <rect key="frame" x="36" y="81" width="248" height="114"/>
+                                <rect key="frame" x="36" y="71" width="248" height="114"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="99"/>
                                 <color key="textColor" red="0.94167007957070459" green="0.9974619289340102" blue="0.98896310119675146" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Etl-gr-bq8">
-                                <rect key="frame" x="138.5" y="243" width="43.5" height="26.5"/>
+                                <rect key="frame" x="138.5" y="233" width="43.5" height="26.5"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="23"/>
                                 <color key="textColor" red="0.94167007957070459" green="0.9974619289340102" blue="0.98896310119675146" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -47,7 +47,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ощущается как: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QVq-mV-Aez">
-                                <rect key="frame" x="36" y="293" width="248" height="21"/>
+                                <rect key="frame" x="36" y="289" width="248" height="21"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
                                 <color key="textColor" red="0.94167007957070459" green="0.9974619289340102" blue="0.98896310119675146" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -59,7 +59,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="TWq-3U-6hX">
-                                <rect key="frame" x="0.0" y="322" width="320" height="144"/>
+                                <rect key="frame" x="0.0" y="319" width="320" height="144"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -117,10 +117,10 @@
                             <constraint firstItem="Etl-gr-bq8" firstAttribute="top" secondItem="tZ1-0H-k02" secondAttribute="bottom" constant="48" id="4c6-PC-b2X"/>
                             <constraint firstItem="tZ1-0H-k02" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6tr-S0-20R"/>
                             <constraint firstItem="BUB-rr-p6g" firstAttribute="top" secondItem="Tb4-tV-Vry" secondAttribute="bottom" constant="8" id="9mg-O9-AGD"/>
-                            <constraint firstItem="QVq-mV-Aez" firstAttribute="top" secondItem="tZ1-0H-k02" secondAttribute="bottom" constant="98" id="EFo-Bq-mAs"/>
+                            <constraint firstItem="QVq-mV-Aez" firstAttribute="top" secondItem="tZ1-0H-k02" secondAttribute="bottom" constant="104" id="EFo-Bq-mAs"/>
                             <constraint firstItem="QVq-mV-Aez" firstAttribute="leading" secondItem="tZ1-0H-k02" secondAttribute="leading" id="ESe-fP-uqF"/>
                             <constraint firstItem="N9A-Jv-hej" firstAttribute="top" secondItem="BUB-rr-p6g" secondAttribute="bottom" constant="8" id="WqI-l8-b4L"/>
-                            <constraint firstItem="tZ1-0H-k02" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="61" id="h5i-jb-nEw"/>
+                            <constraint firstItem="tZ1-0H-k02" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="51" id="h5i-jb-nEw"/>
                             <constraint firstItem="Etl-gr-bq8" firstAttribute="centerX" secondItem="tZ1-0H-k02" secondAttribute="centerX" id="jJp-dn-IHy"/>
                             <constraint firstItem="Tb4-tV-Vry" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="kwg-IK-0gG"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="N9A-Jv-hej" secondAttribute="bottom" constant="20" id="mT5-Bd-aNU"/>
