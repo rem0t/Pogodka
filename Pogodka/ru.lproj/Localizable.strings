@@ -8,8 +8,8 @@
  Humidity, wind, pressure, felt like
 */
 
-"humidity_LAB"="Влажность:%.f%%";
-"wind_LAB"="Ветер:%.f м/с";
-"pressure_LAB"="Давление:%.f мм. рт.ст.";
-"felt_lab"="Ощущается как:%.f°";
+"humidity_LAB"="Влажность: %.f%%";
+"wind_LAB"="Ветер: %.f м/с";
+"pressure_LAB"="Давление: %.f мм. рт.ст.";
+"felt_lab"="Ощущается как: %.f°";
 

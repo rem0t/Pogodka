@@ -5,8 +5,7 @@
 //  Created by Vladislav Kalaev on 15.02.17.
 //  Copyright © 2017 Vladislav Kalaev. All rights reserved.
 //
-// 0) главная фича заключается в том что предупреждает о наступающем дожде например каждый 3-6 часов отправляет запрос и если будет дождь то у ведомляет пользователя (вместо облака будет будильник для сие задумки)
-
+ 
 
 
 #import "ViewController.h"
@@ -137,110 +136,42 @@
 - (void) setbackgroundMainUI
 {
     
-    if ([self.weatherForcast.iconName isEqualToString: @"Rain"])
-    {
-        [self changeMainBackgroundToRain];
-    }
-    else if ([self.weatherForcast.iconName isEqualToString: @"Clear"])
-    {
-        [self changeMainBackgroundToClear];
-    }
-    else if ([self.weatherForcast.iconName isEqualToString: @"Snow"])
-    {
-        [self changeMainBackgroundToSnow];
-    }
-    else if ([self.weatherForcast.iconName isEqualToString: @"Cloud"])
-    {
-        [self changeMainBackgroundToCloud];
-    }
-    else
-    {
-        [self changeMainBackgroundToDefault];
-    }
-}
-
-//много повторяющегося кода 
-
--(void) changeMainBackgroundToRain
-{
-
-    UIGraphicsBeginImageContext(self.view.frame.size);
-    [[UIImage imageNamed:@"Wrain"] drawInRect:self.view.bounds];
-    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-
-    self.view.backgroundColor = [UIColor colorWithPatternImage:image];
-
-}
-
--(void) changeMainBackgroundToCloud
-{
-
-    UIGraphicsBeginImageContext(self.view.frame.size);
-    [[UIImage imageNamed:@"Wcloud"] drawInRect:self.view.bounds];
-    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-
-    self.view.backgroundColor = [UIColor colorWithPatternImage:image];
-
-}
-
--(void) changeMainBackgroundToSnow
-{
-    UIGraphicsBeginImageContext(self.view.frame.size);
-    [[UIImage imageNamed:@"Wsnow"]drawInRect:self.view.bounds];
-    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
+    static  NSURL *url;
+//    
+//    if ([self.weatherForcast.iconName isEqualToString: @"Rain"])
+//    {
+//        url = [[NSBundle mainBundle] URLForResource:@"bkRain" withExtension:@"gif"];
+//    }
+//    else if ([self.weatherForcast.iconName isEqualToString: @"Clear"])
+//    {
+//        url = [[NSBundle mainBundle] URLForResource:@"bkClear" withExtension:@"gif"];
+//    }
+//    else if ([self.weatherForcast.iconName isEqualToString: @"Snow"])
+//    {
+//        url = [[NSBundle mainBundle] URLForResource:@"bkSnow" withExtension:@"gif"];
+//    }
+//    else if ([self.weatherForcast.iconName isEqualToString: @"Cloud"])
+//    {
+//        url = [[NSBundle mainBundle] URLForResource:@"bkCloud" withExtension:@"gif"];
+//    }
+//    else
+//    {
+//        url = [[NSBundle mainBundle] URLForResource:@"bkDefault" withExtension:@"gif"];
+//        
+//    }
     
-    self.view.backgroundColor = [UIColor colorWithPatternImage:image];
+    url = [[NSBundle mainBundle] URLForResource:@"bkSnow" withExtension:@"gif"];
+
+    self.background.image = [UIImage animatedImageWithAnimatedGIFURL:url];
+
     
 }
 
--(void) changeMainBackgroundToClear
-{
-    UIGraphicsBeginImageContext(self.view.frame.size);
-    [[UIImage imageNamed:@"Wclear"]drawInRect:self.view.bounds];
-    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    
-    self.view.backgroundColor = [UIColor colorWithPatternImage:image];
-    
-}
 
--(void) changeMainBackgroundToDefault
-{
-    UIGraphicsBeginImageContext(self.view.frame.size);
-    [[UIImage imageNamed:@"Wdefault"]drawInRect:self.view.bounds];
-    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    
-    self.view.backgroundColor = [UIColor colorWithPatternImage:image];
-    
-}
-
-# pragma mark - Side menu button -
-
-- (IBAction)sideMenu:(id)sender { //Side menu button
-    
-    self.app = (AppDelegate*) [[UIApplication sharedApplication] delegate];
-
-    [_app.driwerController toggleDrawerSide:MMDrawerSideLeft animated:YES completion:nil];
-    
-}
-
-- (IBAction)updateForecast:(id)sender {
-    
-    [self playAnimation];
-    
-    [NSTimer scheduledTimerWithTimeInterval:2.5
-                                     target:self
-                                   selector:@selector(hideWaitingScreen)
-                                   userInfo:nil
-                                    repeats:NO];
-}
 
 # pragma mark - Animations -
 
+// preview loading animations
 
 -(void) playAnimation {
  

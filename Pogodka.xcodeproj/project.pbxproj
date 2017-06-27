@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F1BA5FD1F02A54900E85DED /* bkRain.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0F1BA5FC1F02A54900E85DED /* bkRain.gif */; };
+		0F1BA6031F02ADAD00E85DED /* bkSnow.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0F1BA6021F02ADAD00E85DED /* bkSnow.gif */; };
 		0F2F49761E92C4DB00FC2062 /* PatternViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F2F49751E92C4DB00FC2062 /* PatternViewCell.m */; };
 		0F440C671E64F3EF00DC55E3 /* Forcast.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F440C5F1E60958C00DC55E3 /* Forcast.m */; };
 		0F6A67891E53ACCF001F84D3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F6A67881E53ACCF001F84D3 /* main.m */; };
@@ -14,13 +16,8 @@
 		0F6A678F1E53ACCF001F84D3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F6A678E1E53ACCF001F84D3 /* ViewController.m */; };
 		0F6A67971E53ACD0001F84D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F6A67951E53ACD0001F84D3 /* LaunchScreen.storyboard */; };
 		0F6A67A71E568F60001F84D3 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F6A67A61E568F60001F84D3 /* CoreLocation.framework */; };
-		0F6BEE5A1E8BFFF0002BEF6B /* MMDrawerBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F6BEE521E8BFFF0002BEF6B /* MMDrawerBarButtonItem.m */; };
-		0F6BEE5B1E8BFFF0002BEF6B /* MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F6BEE551E8BFFF0002BEF6B /* MMDrawerController.m */; };
-		0F6BEE5C1E8BFFF0002BEF6B /* MMDrawerVisualState.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F6BEE571E8BFFF0002BEF6B /* MMDrawerVisualState.m */; };
-		0F6BEE5D1E8BFFF0002BEF6B /* UIViewController+MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F6BEE591E8BFFF0002BEF6B /* UIViewController+MMDrawerController.m */; };
 		0F6BEE601E8C00E1002BEF6B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F6BEE621E8C00E1002BEF6B /* Main.storyboard */; };
 		0F767A6A1E85DFFA0013C31D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0F767A6C1E85DFFA0013C31D /* Localizable.strings */; };
-		0F87A7451E7A30DC0033CF12 /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F87A7441E7A30DC0033CF12 /* LeftViewController.m */; };
 		0FC7DC141EC1442700A2EC0A /* UIImage+animatedGIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FC7DC131EC1442700A2EC0A /* UIImage+animatedGIF.m */; };
 		0FC7DC151EC1445100A2EC0A /* UIImage+animatedGIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FC7DC131EC1442700A2EC0A /* UIImage+animatedGIF.m */; };
 		0FC7DC1A1EC1460F00A2EC0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FC7DC191EC1460F00A2EC0A /* Assets.xcassets */; };
@@ -72,6 +69,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0F1BA5FC1F02A54900E85DED /* bkRain.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = bkRain.gif; sourceTree = "<group>"; };
+		0F1BA6021F02ADAD00E85DED /* bkSnow.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = bkSnow.gif; sourceTree = "<group>"; };
 		0F2F49741E92C4DB00FC2062 /* PatternViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PatternViewCell.h; sourceTree = "<group>"; };
 		0F2F49751E92C4DB00FC2062 /* PatternViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PatternViewCell.m; sourceTree = "<group>"; };
 		0F440C5E1E60958C00DC55E3 /* Forcast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Forcast.h; sourceTree = "<group>"; };
@@ -85,21 +84,10 @@
 		0F6A67961E53ACD0001F84D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0F6A67981E53ACD0001F84D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0F6A67A61E568F60001F84D3 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		0F6BEE511E8BFFF0002BEF6B /* MMDrawerBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDrawerBarButtonItem.h; sourceTree = "<group>"; };
-		0F6BEE521E8BFFF0002BEF6B /* MMDrawerBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDrawerBarButtonItem.m; sourceTree = "<group>"; };
-		0F6BEE531E8BFFF0002BEF6B /* MMDrawerController+Subclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MMDrawerController+Subclass.h"; sourceTree = "<group>"; };
-		0F6BEE541E8BFFF0002BEF6B /* MMDrawerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDrawerController.h; sourceTree = "<group>"; };
-		0F6BEE551E8BFFF0002BEF6B /* MMDrawerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDrawerController.m; sourceTree = "<group>"; };
-		0F6BEE561E8BFFF0002BEF6B /* MMDrawerVisualState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDrawerVisualState.h; sourceTree = "<group>"; };
-		0F6BEE571E8BFFF0002BEF6B /* MMDrawerVisualState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDrawerVisualState.m; sourceTree = "<group>"; };
-		0F6BEE581E8BFFF0002BEF6B /* UIViewController+MMDrawerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MMDrawerController.h"; sourceTree = "<group>"; };
-		0F6BEE591E8BFFF0002BEF6B /* UIViewController+MMDrawerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MMDrawerController.m"; sourceTree = "<group>"; };
 		0F6BEE611E8C00E1002BEF6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0F767A671E85DE100013C31D /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		0F767A6B1E85DFFA0013C31D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		0F767A6D1E85E0010013C31D /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
-		0F87A7431E7A30DC0033CF12 /* LeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftViewController.h; sourceTree = "<group>"; };
-		0F87A7441E7A30DC0033CF12 /* LeftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftViewController.m; sourceTree = "<group>"; };
 		0FB2742A1E5BC0030054364A /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		0FC7DC121EC1442700A2EC0A /* UIImage+animatedGIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+animatedGIF.h"; sourceTree = "<group>"; };
 		0FC7DC131EC1442700A2EC0A /* UIImage+animatedGIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+animatedGIF.m"; sourceTree = "<group>"; };
@@ -188,26 +176,9 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		0F6BEE501E8BFFF0002BEF6B /* sidemenu */ = {
-			isa = PBXGroup;
-			children = (
-				0F6BEE511E8BFFF0002BEF6B /* MMDrawerBarButtonItem.h */,
-				0F6BEE521E8BFFF0002BEF6B /* MMDrawerBarButtonItem.m */,
-				0F6BEE531E8BFFF0002BEF6B /* MMDrawerController+Subclass.h */,
-				0F6BEE541E8BFFF0002BEF6B /* MMDrawerController.h */,
-				0F6BEE551E8BFFF0002BEF6B /* MMDrawerController.m */,
-				0F6BEE561E8BFFF0002BEF6B /* MMDrawerVisualState.h */,
-				0F6BEE571E8BFFF0002BEF6B /* MMDrawerVisualState.m */,
-				0F6BEE581E8BFFF0002BEF6B /* UIViewController+MMDrawerController.h */,
-				0F6BEE591E8BFFF0002BEF6B /* UIViewController+MMDrawerController.m */,
-			);
-			path = sidemenu;
-			sourceTree = "<group>";
-		};
 		0FCE4E961EAB8E0300273050 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				0F6BEE501E8BFFF0002BEF6B /* sidemenu */,
 				0F6A678A1E53ACCF001F84D3 /* AppDelegate.h */,
 				0F6A678B1E53ACCF001F84D3 /* AppDelegate.m */,
 				0F440C5E1E60958C00DC55E3 /* Forcast.h */,
@@ -219,12 +190,12 @@
 		0FCE4E971EAB8E1600273050 /* UIandControl */ = {
 			isa = PBXGroup;
 			children = (
-				0F87A7431E7A30DC0033CF12 /* LeftViewController.h */,
-				0F87A7441E7A30DC0033CF12 /* LeftViewController.m */,
 				0F6A678D1E53ACCF001F84D3 /* ViewController.h */,
 				0F6A678E1E53ACCF001F84D3 /* ViewController.m */,
 				0F2F49741E92C4DB00FC2062 /* PatternViewCell.h */,
 				0F2F49751E92C4DB00FC2062 /* PatternViewCell.m */,
+				0F1BA5FC1F02A54900E85DED /* bkRain.gif */,
+				0F1BA6021F02ADAD00E85DED /* bkSnow.gif */,
 				0FC7DC191EC1460F00A2EC0A /* Assets.xcassets */,
 			);
 			name = UIandControl;
@@ -353,9 +324,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F6BEE601E8C00E1002BEF6B /* Main.storyboard in Resources */,
+				0F1BA5FD1F02A54900E85DED /* bkRain.gif in Resources */,
 				0FEBBCFC1EC1DFE400E978F3 /* sunny.gif in Resources */,
 				0FEBBCF01EC1DF7400E978F3 /* sleet.gif in Resources */,
 				0F767A6A1E85DFFA0013C31D /* Localizable.strings in Resources */,
+				0F1BA6031F02ADAD00E85DED /* bkSnow.gif in Resources */,
 				0FEBBCF61EC1DFB200E978F3 /* snow.gif in Resources */,
 				0FEBBCF31EC1DFAB00E978F3 /* fog.gif in Resources */,
 				0FEBBCFF1EC1E00400E978F3 /* partlyCloudy.gif in Resources */,
@@ -392,12 +365,7 @@
 				0FCE4EB21EC0EBF700273050 /* TodayViewController.m in Sources */,
 				0FC7DC141EC1442700A2EC0A /* UIImage+animatedGIF.m in Sources */,
 				0F6A678F1E53ACCF001F84D3 /* ViewController.m in Sources */,
-				0F6BEE5A1E8BFFF0002BEF6B /* MMDrawerBarButtonItem.m in Sources */,
-				0F6BEE5B1E8BFFF0002BEF6B /* MMDrawerController.m in Sources */,
-				0F87A7451E7A30DC0033CF12 /* LeftViewController.m in Sources */,
-				0F6BEE5C1E8BFFF0002BEF6B /* MMDrawerVisualState.m in Sources */,
 				0F6A678C1E53ACCF001F84D3 /* AppDelegate.m in Sources */,
-				0F6BEE5D1E8BFFF0002BEF6B /* UIViewController+MMDrawerController.m in Sources */,
 				0F2F49761E92C4DB00FC2062 /* PatternViewCell.m in Sources */,
 				0F440C671E64F3EF00DC55E3 /* Forcast.m in Sources */,
 				0F6A67891E53ACCF001F84D3 /* main.m in Sources */,

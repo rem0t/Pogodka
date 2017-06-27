@@ -8,7 +8,7 @@
  Humidity, wind, pressure, felt like
 */
 
-"humidity_LAB"="Humidity:%.f%%";
-"wind_LAB"="Wind:%.f m/s";
-"pressure_LAB"="Pressure:%.f mmHg";
-"felt_lab"="Feels like:%.f°";
+"humidity_LAB"="Humidity: %.f%%";
+"wind_LAB"="Wind: %.f m/s";
+"pressure_LAB"="Pressure: %.f mmHg";
+"felt_lab"="Feels like: %.f°";

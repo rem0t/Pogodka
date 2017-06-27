@@ -18,28 +18,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 // Override point for customization after application launch.
 
-    // ниже описаны основыне строчки кода для выдвижного меню
-    
-    UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    
-    UIViewController *leftView = [mainStoryboard instantiateViewControllerWithIdentifier:@"LeftViewController"];
-    UIViewController *centrView = [mainStoryboard instantiateViewControllerWithIdentifier:@"CenterViewController"];
 
-    UINavigationController *leftNav = [[UINavigationController alloc] initWithRootViewController:leftView];
-    UINavigationController *centrNav = [[UINavigationController alloc] initWithRootViewController:centrView];
-    
-    [leftNav setNavigationBarHidden:YES animated:YES];
-    [centrNav setNavigationBarHidden:YES animated:YES];
-
-    
-    self.driwerController = [[MMDrawerController alloc] initWithCenterViewController:centrNav leftDrawerViewController:leftNav];
-
-    
-    self.driwerController.openDrawerGestureModeMask = MMOpenDrawerGestureModePanningCenterView;
-    self.driwerController.closeDrawerGestureModeMask = MMCloseDrawerGestureModePanningCenterView;
-
-    _window.rootViewController = self.driwerController;
-    [_window makeKeyAndVisible];
     
     return YES;
 }

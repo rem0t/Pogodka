@@ -8,9 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "MMDrawerController.h"
 #import "AppDelegate.h"
 #import "Forcast.h"
+#import "UIImage+animatedGIF.h"
 
 
 @interface ViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
@@ -28,11 +28,9 @@
 @property (strong, nonatomic) IBOutlet UILabel *pressureLabel; // давление
 @property (strong, nonatomic) IBOutlet UILabel *apperentTemp;
 
+@property (strong, nonatomic) IBOutlet UIImageView *background;
 
 @property (strong, nonatomic) Forcast *weatherForcast;
-
-@property (strong, nonatomic) AppDelegate *app;
-
 
 
 @end
