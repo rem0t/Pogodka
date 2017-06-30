@@ -17,9 +17,6 @@
 
 @property (weak, nonatomic) IBOutlet UICollectionView *todayCollectionView;
 
-- (void) viewDidLoad;
-- (void) playAnimation;
-- (void) hideWaitingScreen;
 
 @property (strong, nonatomic) IBOutlet UILabel *iboCurrentTemperature;
 @property (strong, nonatomic) IBOutlet UILabel *cityLable;
@@ -29,6 +26,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *apperentTemp;
 
 @property (strong, nonatomic) IBOutlet UIImageView *background;
+
 
 @property (strong, nonatomic) Forcast *weatherForcast;
 

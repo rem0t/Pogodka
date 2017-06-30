@@ -8,7 +8,11 @@
  Humidity, wind, pressure, felt like
 */
 
-"humidity_LAB"="Humidity: %.f%%";
-"wind_LAB"="Wind: %.f m/s";
+"humidity_LAB"="Humidity: %.d%%";
+"wind_LAB"="Wind: %.d m/s";
 "pressure_LAB"="Pressure: %.f mmHg";
-"felt_lab"="Feels like: %.f°";
+"felt_lab"="Feels like: %.d°";
+"ERROR"="Error getting geolocation, for the correct operation of the program you need to connect geolocation services";
+
+"todayTemp"="Now: %d°";
+"tomorrowWeather"="Tomorrow: %@";

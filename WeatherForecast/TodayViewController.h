@@ -14,6 +14,7 @@
 
 
 @property (strong, nonatomic) IBOutlet UIImageView *todayWeatherImage;
+
 @property (weak, nonatomic) IBOutlet UILabel *todayCityName;
 @property (weak, nonatomic) IBOutlet UILabel *tomorrowWeather;
 @property (weak, nonatomic) IBOutlet UILabel *todayTemp;

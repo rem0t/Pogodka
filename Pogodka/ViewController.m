@@ -70,18 +70,17 @@
     PatternViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"PatternCell" forIndexPath:indexPath];
     
     
-    NSString *myString1 = [NSString stringWithFormat:@"%ld°", (long)[self.weatherForcast.jsontemp [indexPath.row] integerValue]];
-    NSString *myString2 = [NSString stringWithFormat:@"%@", [self.weatherForcast.jsonIcon objectAtIndex:indexPath.row]];
- 
-    cell.cellLabel.text = myString1;
-    cell.weatherIcon.image = [UIImage imageNamed:myString2];
+    cell.cellLabel.text = [NSString stringWithFormat:@"%li°", (long)roundf([self.weatherForcast.arrayWithWeater[indexPath.row][@"temp"][@"eve"] floatValue])];
+
+    cell.weatherIcon.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@", [self.weatherForcast.jsonIcon objectAtIndex:indexPath.row]]];
     
-    NSInteger timeinterval = [self.weatherForcast.jsontime[indexPath.row] integerValue];
+    
+    NSInteger timeinterval = [self.weatherForcast.arrayWithWeater[indexPath.item][@"dt"] integerValue];
+
     NSDate * date = [[NSDate alloc] initWithTimeIntervalSince1970:timeinterval];
     NSDateFormatter *formatter = [NSDateFormatter new];
     formatter.dateFormat = @"EEE";
     cell.timeLabel.text = [formatter stringFromDate:date];
-    
     
     return cell;
     
@@ -101,7 +100,7 @@
 
 # pragma mark - WeatherForecast - 
 
--(void) initForecast
+-(void) initForecast        // что тут не так 
 {
     
     self.weatherForcast = [[Forcast alloc]init];
@@ -111,17 +110,31 @@
 }
 
 
-# pragma mark - set Values Labele On View -
+# pragma mark - Values Label On View -
 
 - (void) updateLabele
 {
-    
+
     self.cityLable.text = [NSString stringWithFormat:@"%@", self.weatherForcast.locality]; // место
-    self.iboCurrentTemperature.text =  [NSString stringWithFormat: @"%.f°", self.weatherForcast.currentCel]; // температура
-    self.humidityLabel.text = [NSString stringWithFormat:NSLocalizedString(@"humidity_LAB", nil), self.weatherForcast.currentHumidity]; // влажность
-    self.windLabel.text = [NSString stringWithFormat:NSLocalizedString(@"wind_LAB", nil),self.weatherForcast.currentWind]; // ветер
-    self.pressureLabel.text = [NSString stringWithFormat:NSLocalizedString(@"pressure_LAB", nil),self.weatherForcast.currentPressure ]; // давление
-    self.apperentTemp.text = [NSString stringWithFormat:NSLocalizedString(@"felt_lab", nil), self.weatherForcast.apperentCel]; // ощущается как
+    self.iboCurrentTemperature.text =  [NSString stringWithFormat:@"%d°", [[[[self.weatherForcast.arrayWithWeater
+                                                                             valueForKey:@"temp" ]
+                                                                             valueForKey:@"day"] firstObject] intValue] ];
+ // температура
+    
+    self.humidityLabel.text = [NSString stringWithFormat:NSLocalizedString(@"humidity_LAB", nil), [[[self.weatherForcast.arrayWithWeater
+                                                                                                     valueForKey:@"humidity"] firstObject] intValue]]; // влажность
+    
+    
+    self.windLabel.text = [NSString stringWithFormat:NSLocalizedString(@"wind_LAB", nil),[[[self.weatherForcast.arrayWithWeater
+                                                                                            valueForKey:@"speed"] firstObject] intValue]]; // ветер
+    
+    self.pressureLabel.text = [NSString stringWithFormat:NSLocalizedString(@"pressure_LAB", nil),[[[self.weatherForcast.arrayWithWeater valueForKey:@"pressure"] firstObject] floatValue]*0.75006375541921]; // давление
+   
+    
+    
+    self.apperentTemp.text = [NSString stringWithFormat:NSLocalizedString(@"felt_lab", nil), [[[[self.weatherForcast.arrayWithWeater valueForKey:@"temp" ] valueForKey:@"eve"] firstObject] intValue] ]; // ощущается как
+    
+    
     
     [self setbackgroundMainUI];
     
@@ -136,31 +149,30 @@
 - (void) setbackgroundMainUI
 {
     
-    static  NSURL *url;
-//    
-//    if ([self.weatherForcast.iconName isEqualToString: @"Rain"])
-//    {
-//        url = [[NSBundle mainBundle] URLForResource:@"bkRain" withExtension:@"gif"];
-//    }
-//    else if ([self.weatherForcast.iconName isEqualToString: @"Clear"])
-//    {
-//        url = [[NSBundle mainBundle] URLForResource:@"bkClear" withExtension:@"gif"];
-//    }
-//    else if ([self.weatherForcast.iconName isEqualToString: @"Snow"])
-//    {
-//        url = [[NSBundle mainBundle] URLForResource:@"bkSnow" withExtension:@"gif"];
-//    }
-//    else if ([self.weatherForcast.iconName isEqualToString: @"Cloud"])
-//    {
-//        url = [[NSBundle mainBundle] URLForResource:@"bkCloud" withExtension:@"gif"];
-//    }
-//    else
-//    {
-//        url = [[NSBundle mainBundle] URLForResource:@"bkDefault" withExtension:@"gif"];
-//        
-//    }
+    NSURL *url;
     
-    url = [[NSBundle mainBundle] URLForResource:@"bkSnow" withExtension:@"gif"];
+    if ([[self.weatherForcast.jsonIcon firstObject] isEqualToString: @"Rain"])
+    {
+        url = [[NSBundle mainBundle] URLForResource:@"bkRain" withExtension:@"gif"];
+    }
+    else if ([[self.weatherForcast.jsonIcon firstObject] isEqualToString: @"Clear"])
+    {
+        url = [[NSBundle mainBundle] URLForResource:@"bkDefault" withExtension:@"gif"];
+    }
+    else if ([[self.weatherForcast.jsonIcon firstObject] isEqualToString: @"Snow"])
+    {
+        url = [[NSBundle mainBundle] URLForResource:@"bkSnow" withExtension:@"gif"];
+    }
+    else if ([[self.weatherForcast.jsonIcon firstObject] isEqualToString: @"Cloud"])
+    {
+        url = [[NSBundle mainBundle] URLForResource:@"bkCloud" withExtension:@"gif"];
+    }
+    else
+    {
+        url = [[NSBundle mainBundle] URLForResource:@"bkDefault" withExtension:@"gif"];
+        
+    }
+    
 
     self.background.image = [UIImage animatedImageWithAnimatedGIFURL:url];
 

@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		0F1BA5FD1F02A54900E85DED /* bkRain.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0F1BA5FC1F02A54900E85DED /* bkRain.gif */; };
 		0F1BA6031F02ADAD00E85DED /* bkSnow.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0F1BA6021F02ADAD00E85DED /* bkSnow.gif */; };
+		0F23DD711F051E5400AA8A36 /* bkCloud.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0F23DD701F051E5400AA8A36 /* bkCloud.gif */; };
+		0F23DD751F05237600AA8A36 /* bkDefault.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0F23DD741F05237600AA8A36 /* bkDefault.gif */; };
+		0F23DD831F05308D00AA8A36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F23DD821F05308D00AA8A36 /* Assets.xcassets */; };
 		0F2F49761E92C4DB00FC2062 /* PatternViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F2F49751E92C4DB00FC2062 /* PatternViewCell.m */; };
 		0F440C671E64F3EF00DC55E3 /* Forcast.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F440C5F1E60958C00DC55E3 /* Forcast.m */; };
 		0F6A67891E53ACCF001F84D3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F6A67881E53ACCF001F84D3 /* main.m */; };
@@ -20,8 +23,6 @@
 		0F767A6A1E85DFFA0013C31D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0F767A6C1E85DFFA0013C31D /* Localizable.strings */; };
 		0FC7DC141EC1442700A2EC0A /* UIImage+animatedGIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FC7DC131EC1442700A2EC0A /* UIImage+animatedGIF.m */; };
 		0FC7DC151EC1445100A2EC0A /* UIImage+animatedGIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FC7DC131EC1442700A2EC0A /* UIImage+animatedGIF.m */; };
-		0FC7DC1A1EC1460F00A2EC0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FC7DC191EC1460F00A2EC0A /* Assets.xcassets */; };
-		0FC7DC1B1EC1460F00A2EC0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FC7DC191EC1460F00A2EC0A /* Assets.xcassets */; };
 		0FCE4E9D1EC0ACE600273050 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FB2742A1E5BC0030054364A /* NotificationCenter.framework */; };
 		0FCE4EA11EC0ACE700273050 /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FCE4EA01EC0ACE700273050 /* TodayViewController.m */; };
 		0FCE4EA41EC0ACE700273050 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FCE4EA21EC0ACE700273050 /* MainInterface.storyboard */; };
@@ -71,6 +72,9 @@
 /* Begin PBXFileReference section */
 		0F1BA5FC1F02A54900E85DED /* bkRain.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = bkRain.gif; sourceTree = "<group>"; };
 		0F1BA6021F02ADAD00E85DED /* bkSnow.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = bkSnow.gif; sourceTree = "<group>"; };
+		0F23DD701F051E5400AA8A36 /* bkCloud.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = bkCloud.gif; sourceTree = "<group>"; };
+		0F23DD741F05237600AA8A36 /* bkDefault.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = bkDefault.gif; sourceTree = "<group>"; };
+		0F23DD821F05308D00AA8A36 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0F2F49741E92C4DB00FC2062 /* PatternViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PatternViewCell.h; sourceTree = "<group>"; };
 		0F2F49751E92C4DB00FC2062 /* PatternViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PatternViewCell.m; sourceTree = "<group>"; };
 		0F440C5E1E60958C00DC55E3 /* Forcast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Forcast.h; sourceTree = "<group>"; };
@@ -91,7 +95,6 @@
 		0FB2742A1E5BC0030054364A /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		0FC7DC121EC1442700A2EC0A /* UIImage+animatedGIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+animatedGIF.h"; sourceTree = "<group>"; };
 		0FC7DC131EC1442700A2EC0A /* UIImage+animatedGIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+animatedGIF.m"; sourceTree = "<group>"; };
-		0FC7DC191EC1460F00A2EC0A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0FCE4E9C1EC0ACE600273050 /* WeatherForecast.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WeatherForecast.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FCE4E9F1EC0ACE700273050 /* TodayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodayViewController.h; sourceTree = "<group>"; };
 		0FCE4EA01EC0ACE700273050 /* TodayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodayViewController.m; sourceTree = "<group>"; };
@@ -126,6 +129,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F23DD6F1F0518EA00AA8A36 /* BackgroundGif */ = {
+			isa = PBXGroup;
+			children = (
+				0F23DD701F051E5400AA8A36 /* bkCloud.gif */,
+				0F1BA5FC1F02A54900E85DED /* bkRain.gif */,
+				0F1BA6021F02ADAD00E85DED /* bkSnow.gif */,
+				0F23DD741F05237600AA8A36 /* bkDefault.gif */,
+			);
+			name = BackgroundGif;
+			sourceTree = "<group>";
+		};
 		0F6A677B1E53ACCF001F84D3 = {
 			isa = PBXGroup;
 			children = (
@@ -148,12 +162,15 @@
 		0F6A67861E53ACCF001F84D3 /* Pogodka */ = {
 			isa = PBXGroup;
 			children = (
+				0F6A678A1E53ACCF001F84D3 /* AppDelegate.h */,
+				0F6A678B1E53ACCF001F84D3 /* AppDelegate.m */,
 				0FCE4E961EAB8E0300273050 /* Model */,
 				0FCE4E971EAB8E1600273050 /* UIandControl */,
 				0F6A67951E53ACD0001F84D3 /* LaunchScreen.storyboard */,
 				0F6BEE621E8C00E1002BEF6B /* Main.storyboard */,
 				0F6A67981E53ACD0001F84D3 /* Info.plist */,
 				0F767A6C1E85DFFA0013C31D /* Localizable.strings */,
+				0F23DD821F05308D00AA8A36 /* Assets.xcassets */,
 				0F6A67871E53ACCF001F84D3 /* Supporting Files */,
 			);
 			path = Pogodka;
@@ -179,8 +196,6 @@
 		0FCE4E961EAB8E0300273050 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				0F6A678A1E53ACCF001F84D3 /* AppDelegate.h */,
-				0F6A678B1E53ACCF001F84D3 /* AppDelegate.m */,
 				0F440C5E1E60958C00DC55E3 /* Forcast.h */,
 				0F440C5F1E60958C00DC55E3 /* Forcast.m */,
 			);
@@ -194,9 +209,7 @@
 				0F6A678E1E53ACCF001F84D3 /* ViewController.m */,
 				0F2F49741E92C4DB00FC2062 /* PatternViewCell.h */,
 				0F2F49751E92C4DB00FC2062 /* PatternViewCell.m */,
-				0F1BA5FC1F02A54900E85DED /* bkRain.gif */,
-				0F1BA6021F02ADAD00E85DED /* bkSnow.gif */,
-				0FC7DC191EC1460F00A2EC0A /* Assets.xcassets */,
+				0F23DD6F1F0518EA00AA8A36 /* BackgroundGif */,
 			);
 			name = UIandControl;
 			sourceTree = "<group>";
@@ -205,7 +218,7 @@
 			isa = PBXGroup;
 			children = (
 				0FEBBD011EC1E02900E978F3 /* GifModel */,
-				0FEBBCEE1EC1DF6000E978F3 /* Todayicon */,
+				0FEBBCEE1EC1DF6000E978F3 /* WidgetGif */,
 				0FCE4E9F1EC0ACE700273050 /* TodayViewController.h */,
 				0FCE4EA01EC0ACE700273050 /* TodayViewController.m */,
 				0FCE4EA21EC0ACE700273050 /* MainInterface.storyboard */,
@@ -215,7 +228,7 @@
 			path = WeatherForecast;
 			sourceTree = "<group>";
 		};
-		0FEBBCEE1EC1DF6000E978F3 /* Todayicon */ = {
+		0FEBBCEE1EC1DF6000E978F3 /* WidgetGif */ = {
 			isa = PBXGroup;
 			children = (
 				0FEBBD021EC1E85600E978F3 /* cloudy1.gif */,
@@ -226,7 +239,7 @@
 				0FEBBCFB1EC1DFE400E978F3 /* sunny.gif */,
 				0FEBBCFE1EC1E00400E978F3 /* partlyCloudy.gif */,
 			);
-			name = Todayicon;
+			name = WidgetGif;
 			sourceTree = "<group>";
 		};
 		0FEBBD011EC1E02900E978F3 /* GifModel */ = {
@@ -331,11 +344,13 @@
 				0F1BA6031F02ADAD00E85DED /* bkSnow.gif in Resources */,
 				0FEBBCF61EC1DFB200E978F3 /* snow.gif in Resources */,
 				0FEBBCF31EC1DFAB00E978F3 /* fog.gif in Resources */,
+				0F23DD711F051E5400AA8A36 /* bkCloud.gif in Resources */,
 				0FEBBCFF1EC1E00400E978F3 /* partlyCloudy.gif in Resources */,
 				0FEBBD031EC1E85600E978F3 /* cloudy1.gif in Resources */,
 				0F6A67971E53ACD0001F84D3 /* LaunchScreen.storyboard in Resources */,
 				0FEBBCF91EC1DFBB00E978F3 /* rain.gif in Resources */,
-				0FC7DC1A1EC1460F00A2EC0A /* Assets.xcassets in Resources */,
+				0F23DD831F05308D00AA8A36 /* Assets.xcassets in Resources */,
+				0F23DD751F05237600AA8A36 /* bkDefault.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,7 +359,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0FEBBD001EC1E00400E978F3 /* partlyCloudy.gif in Resources */,
-				0FC7DC1B1EC1460F00A2EC0A /* Assets.xcassets in Resources */,
 				0FEBBCF11EC1DF8E00E978F3 /* sleet.gif in Resources */,
 				0FEBBCFD1EC1DFE400E978F3 /* sunny.gif in Resources */,
 				0FEBBCF71EC1DFB200E978F3 /* snow.gif in Resources */,

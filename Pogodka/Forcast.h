@@ -13,38 +13,20 @@
 @interface Forcast : UIViewController <CLLocationManagerDelegate>
 
 
-- (void) forecastCall;
-- (void) cityNameMethod;
 - (void) setLocation;
 
-- (float) currentCel;
-- (float) apperentCel;
-- (float) currentHumidity;
-- (float) currentPressure;
-- (float) currentWind;
+
+// Propertis for Labels
+@property(strong,nonatomic) NSString* locality;
+@property (strong, nonatomic) NSArray* arrayWithWeater;
+
+// ***
 
 
-@property (nonatomic) CLLocationManager *locationManager;
-@property (strong,nonatomic) NSString* currentLongitude;
-@property (strong,nonatomic) NSString* currentLatitude;
-
-
-@property(strong,nonatomic) NSString* locality;        // Город subLocality - Район subThoroughfare - проезд
-
-@property (strong,nonatomic) NSString* humidity;
-@property (strong,nonatomic) NSString* wind;
-@property (strong,nonatomic) NSString* pressure;
-@property (strong,nonatomic) NSString* city;
-@property (strong,nonatomic) NSString* currentTemp;
-@property (strong,nonatomic) NSString* currentTemp1;
-@property (strong,nonatomic) NSString* currentAperentTemp;
-@property (strong,nonatomic) NSNumber* time;
-@property (strong,nonatomic) NSString* iconName;
-
-
-@property (strong,nonatomic) NSArray* jsontime;
-@property (strong,nonatomic) NSArray* jsontemp;
+// Propertis for UICollectionView
 @property (strong,nonatomic) NSArray* jsonIcon;
+
+// ***
 
 
 

@@ -61,8 +61,12 @@
     
     
     self.todayCityName.text = [NSString stringWithFormat:@"%@", self.weatherForcast.locality];
-    self.todayTemp.text = [NSString stringWithFormat: @"Now: %.f°", self.weatherForcast.currentCel];
-    self.tomorrowWeather.text = [NSString stringWithFormat:@"Tomorrow: %@", [self.weatherForcast.jsonIcon objectAtIndex:1]];
+    self.todayTemp.text = [NSString stringWithFormat:NSLocalizedString(@"todayTemp", nil), [[[[self.weatherForcast.arrayWithWeater
+                                                                        valueForKey:@"temp" ]
+                                                                       valueForKey:@"day"] firstObject] intValue] ];
+    
+    self.tomorrowWeather.text = [NSString stringWithFormat:NSLocalizedString(@"tomorrowWeather", nil), [self.weatherForcast.jsonIcon objectAtIndex:1]];
+
     
     [self setTodayIconGif];
 
@@ -82,19 +86,19 @@
 {
     NSURL *url;
     
-    if ([self.weatherForcast.iconName isEqualToString: @"Rain"])
+    if ([[self.weatherForcast.jsonIcon firstObject] isEqualToString: @"Rain"])
     {
         url = [[NSBundle mainBundle] URLForResource:@"rain" withExtension:@"gif"];
     }
-    else if ([self.weatherForcast.iconName isEqualToString: @"Clear"])
+    else if ([[self.weatherForcast.jsonIcon firstObject] isEqualToString: @"Clear"])
     {
         url = [[NSBundle mainBundle] URLForResource:@"sunny" withExtension:@"gif"];
     }
-    else if ([self.weatherForcast.iconName isEqualToString: @"Snow"])
+    else if ([[self.weatherForcast.jsonIcon firstObject] isEqualToString: @"Snow"])
     {
         url = [[NSBundle mainBundle] URLForResource:@"snow" withExtension:@"gif"];
     }
-    else if ([self.weatherForcast.iconName isEqualToString: @"Cloud"])
+    else if ([[self.weatherForcast.jsonIcon firstObject] isEqualToString: @"Cloud"])
     {
         url = [[NSBundle mainBundle] URLForResource:@"cloudy1" withExtension:@"gif"];
     }

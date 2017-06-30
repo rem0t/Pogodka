@@ -9,13 +9,26 @@
 
 #import "Forcast.h"
 
-#define API_KEY @"f032f3940de70aef8cb66eb16d389bd5"
+
+@interface Forcast ()
+
+@property (nonatomic) CLLocationManager *locationManager;
+@property (strong,nonatomic) NSString* currentLongitude;
+@property (strong,nonatomic) NSString* currentLatitude;
+
+
+@end
+
+
+static const NSString *apiKey = @"f032f3940de70aef8cb66eb16d389bd5";
+
+
 
 @implementation Forcast
 
 
-# pragma mark - Location -
 
+# pragma mark - Location -
 
 - (void) setLocation
 {
@@ -38,8 +51,8 @@
 {
     NSLog(@"didFailWithError: %@", error);
     
-    UIAlertController* alertError = [UIAlertController alertControllerWithTitle:@"ERROR" //  | сделать в отдельном классе 
-                                                                        message:@"Ошибка получения геолокации, для корректной работы программы нужно подключить службы геолокации"
+    UIAlertController* alertError = [UIAlertController alertControllerWithTitle:@"ERROR" 
+                                                                        message:NSLocalizedString(@"ERROR", nil)
                                                                  preferredStyle:UIAlertControllerStyleAlert];
     
     [self presentViewController:alertError animated:YES completion:nil];
@@ -64,11 +77,12 @@
         self.currentLongitude = [NSString stringWithFormat:@"%.8f", currentLocation.coordinate.longitude];
         self.currentLatitude = [NSString stringWithFormat:@"%.8f", currentLocation.coordinate.latitude];
         
-       
+        
        static dispatch_once_t onceToken; // вызываем метод один раз т.е. обращаемся за данными к серверу.
         dispatch_once(&onceToken, ^{
             
-             [self forecastCall];
+            [self weekWeatherForecastRequest];
+            
            [self cityNameMethod];
 
         });
@@ -86,14 +100,16 @@
                        NSLog(@"reverseGeocodeLocation:completionHandler: Completion Handler called!");
                        
                        if (error){
+                           
                            NSLog(@"Geocode failed with error: %@", error);
+                        
                            return;
                            
                        }
                        
                        CLPlacemark *placemark = [placemarks objectAtIndex:0];
  
-                       self.locality = placemark.locality; // Город
+                       self.locality = placemark.locality; // район subLocality | проезд subThoroughfare
         
         [[NSNotificationCenter defaultCenter] postNotificationName:@"MyNotification" object:nil];
    
@@ -101,102 +117,28 @@
     
 }
 
-# pragma mark - NowForecastCall -
 
--(void) forecastCall
-{
-    NSString *url = [NSString stringWithFormat:@"http://api.openweathermap.org/data/2.5/weather?lat=%@&lon=%@&APPID=%@&units=metric",self.currentLatitude,self.currentLongitude, API_KEY];
-    
-    NSURL *weatherURL = [NSURL URLWithString:url];
-    NSData *date = [NSData dataWithContentsOfURL:weatherURL];
-    NSDictionary *jsonDate = [NSJSONSerialization JSONObjectWithData:date options:0 error:nil];
-    
-    
-    NSDictionary *currentDate = [jsonDate valueForKey:@"main"];
-    NSString *currentTemperature = [currentDate valueForKey:@"temp"];
-    NSString *apparentTemperature = [currentDate valueForKey:@"temp_min"];
-    NSString *currentHumidity = [currentDate valueForKey:@"humidity"];
-    NSString *currentPressure = [currentDate valueForKey:@"pressure"];
-    
-    NSArray *weatherArray = [[jsonDate valueForKey:@"weather"] firstObject];
-    NSString *iconName = [weatherArray valueForKey:@"main"];
-    
-    NSDictionary *currentDatewind = [jsonDate valueForKey:@"wind"];
-    NSString *currentWind = [currentDatewind valueForKey:@"speed"];
-    
-
-    self.currentAperentTemp = apparentTemperature;
-    self.currentTemp = currentTemperature;
-    self.humidity = currentHumidity;
-    self.pressure = currentPressure;
-    self.wind = currentWind;
-    self.iconName = iconName;
-    
-    [self hourlyForecastCall];
-
-}
-
-# pragma mark - Weather -
-
-- (float) currentCel {
-    
-    float celsios = [self.currentTemp intValue];
-    
-    return celsios;
-    
-}
-
-- (float) apperentCel {
-    
-    float celsiosApparent = [self.currentAperentTemp intValue];
-    
-    return celsiosApparent;
-}
-
-- (float) currentHumidity {
-    
-    float humidity = [self.humidity intValue];
-    
-    return humidity;
-}
-
-- (float) currentPressure {
-    
-    float pressure = [self.pressure intValue];
-    
-    pressure *= 0.75006375541921; // перевод в мм. рт. ст.
-    
-    return pressure;
-}
-
-- (float) currentWind {
-    
-    float wind = [self.wind intValue];
-    
-    return wind;
-}
 
 # pragma mark - HourlyForecastCall -
 
--(void) hourlyForecastCall
+-(void) weekWeatherForecastRequest
+
 {
 
-NSString *url = [NSString stringWithFormat:@"http://api.openweathermap.org/data/2.5/forecast/daily?lat=%@&lon=%@&APPID=%@&units=metric&cnt=6",self.currentLatitude,self.currentLongitude, API_KEY];
+NSString *url = [NSString stringWithFormat:@"http://api.openweathermap.org/data/2.5/forecast/daily?lat=%@&lon=%@&APPID=%@&units=metric&cnt=6",self.currentLatitude,self.currentLongitude,apiKey];
     
 NSURL *weatherURL = [NSURL URLWithString:url];
 NSData *date = [NSData dataWithContentsOfURL:weatherURL];
 NSDictionary *jsonDate = [NSJSONSerialization JSONObjectWithData:date options:0 error:nil];
     
-NSArray *dailyjson = [jsonDate valueForKey:@"list"];
-NSArray *data = [dailyjson valueForKey:@"dt"];
+self.arrayWithWeater = jsonDate[@"list"];   
         
-NSArray *jsonTemp = [dailyjson valueForKey:@"temp"];
-NSArray *jsonTempEve = [jsonTemp valueForKey:@"eve"];
+    
+NSArray *dailyjson = [jsonDate valueForKey:@"list"];
     
 NSArray *jsonWeather = [dailyjson valueForKey:@"weather"];
   
 NSMutableArray *name = [[NSMutableArray alloc] init];
-
 
     
 for (NSArray *dict in jsonWeather )
@@ -206,8 +148,6 @@ for (NSArray *dict in jsonWeather )
     
 NSArray *newArray =[name valueForKey:@"main"];
     
-    self.jsontime = data;
-    self.jsontemp = jsonTempEve;
     self.jsonIcon = newArray;
    
 }
