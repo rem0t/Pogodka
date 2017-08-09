@@ -12,11 +12,9 @@
 #import "Forcast.h"
 #import "UIImage+animatedGIF.h"
 
-
 @interface ViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 
 @property (weak, nonatomic) IBOutlet UICollectionView *todayCollectionView;
-
 
 @property (strong, nonatomic) IBOutlet UILabel *iboCurrentTemperature;
 @property (strong, nonatomic) IBOutlet UILabel *cityLable;

@@ -12,22 +12,15 @@
 
 @interface Forcast : UIViewController <CLLocationManagerDelegate>
 
-
 - (void) setLocation;
-
 
 // Propertis for Labels
 @property(strong,nonatomic) NSString* locality;
 @property (strong, nonatomic) NSArray* arrayWithWeater;
-
 // ***
-
 
 // Propertis for UICollectionView
 @property (strong,nonatomic) NSArray* jsonIcon;
-
 // ***
-
-
 
 @end
