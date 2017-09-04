@@ -16,6 +16,6 @@ Main features
 Application operation
 ----
 
-| ![myapp](https://cloud.githubusercontent.com/assets/23454470/25853250/d63d67d8-34d4-11e7-842a-c280107cf776.gif)
+| ![myawesomeapp](https://user-images.githubusercontent.com/23454470/30025636-15071464-9182-11e7-872c-706fcf041f35.gif)
  | ![widget](https://cloud.githubusercontent.com/assets/23454470/25851495/b0a935d4-34ce-11e7-97b0-a1f333ab50bb.gif)
  |
